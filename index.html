@@ -1,100 +1,1250 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acha Blumenau — Guia Comercial & Serviços</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Acha Blumenau | Encontre Profissionais na Cidade</title>
+
+<!-- Tailwind CSS para estilização rápida e responsiva -->
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Fontes Google Inter -->
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome para ícones -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<style>
+
+body {
+
+font-family: 'Inter', sans-serif;
+
+-webkit-tap-highlight-color: transparent;
+
+}
+
+/* Efeito de scroll suave nas categorias */
+
+.no-scrollbar::-webkit-scrollbar {
+
+display: none;
+
+}
+
+.no-scrollbar {
+
+-ms-overflow-style: none;
+
+scrollbar-width: none;
+
+}
+
+/* Animação suave nos cards */
+
+.card-transition {
+
+transition: all 0.2s ease-in-out;
+
+}
+
+.card-transition:hover {
+
+transform: translateY(-2px);
+
+}
+
+.card-transition:active {
+
+transform: scale(0.98);
+
+}
+
+</style>
+
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans pb-12">
 
-  <!-- CABEÇALHO -->
-  <header class="bg-blue-600 text-white p-4 sticky top-0 z-50 shadow-md">
-    <div class="max-w-md mx-auto flex justify-between items-center">
-      <h1 class="text-xl font-bold tracking-tight">Acha Blumenau</h1>
-      <span class="text-xs bg-blue-700 px-2 py-1 rounded-full font-medium">Guia Local</span>
-    </div>
-  </header>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
 
-  <!-- BUSCA E FILTROS -->
-  <main class="max-w-md mx-auto p-4 space-y-4">
-    <div class="space-y-2">
-      <input type="text" placeholder="O que você procura? (ex: Pizza, Barbeiro)" class="w-full p-3 rounded-lg border border-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-      
-      <div class="flex gap-2">
-        <select class="w-1/2 p-2 rounded-lg border border-gray-200 bg-white text-sm">
-          <option value="">Todos os Bairros</option>
-          <option value="centro">Centro</option>
-          <option value="garcia">Garcia</option>
-          <option value="velha">Velha</option>
-          <option value="itoupava">Itoupava Norte</option>
-          <option value="salto">Salto Norte</option>
-        </select>
 
-        <select class="w-1/2 p-2 rounded-lg border border-gray-200 bg-white text-sm">
-          <option value="">Todas Categorias</option>
-          <option value="comida">Alimentação</option>
-          <option value="servicos">Serviços / Emergência</option>
-          <option value="eventos">Eventos & Festas</option>
-        </select>
-      </div>
-    </div>
 
-    <!-- BANNER DE DESTAQUE / EVENTO -->
-    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl p-4 text-white shadow-md">
-      <span class="text-xs font-bold bg-yellow-400 text-gray-900 px-2 py-0.5 rounded-full uppercase">Destaque</span>
-      <h2 class="text-lg font-bold mt-1">Sertanejo Premium no Spazio</h2>
-      <p class="text-xs text-purple-100">Sábado às 22h • Entrada VIP com desconto Acha</p>
-      <a href="https://wa.me/5547999999999?text=Vim%20pelo%20Acha%20Blumenau%20e%20quero%20o%20desconto%20no%20ingresso" target="_blank" class="inline-block mt-3 bg-white text-purple-700 font-bold text-xs px-4 py-2 rounded-lg shadow hover:bg-gray-100">Garantir Ingresso</a>
-    </div>
+<!-- CABEÇALHO -->
 
-    <!-- CARDS DE ESTABELECIMENTOS -->
-    <div class="space-y-3 pt-2">
-      <h3 class="font-bold text-gray-700 text-sm">Em Destaque na Cidade</h3>
+<header class="bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 text-white pt-6 pb-8 px-4 shadow-md relative">
 
-      <!-- CARD 1 (PAGO R$ 29,90) -->
-      <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 relative">
-        <span class="absolute top-3 right-3 bg-green-100 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded-full">⭐ 4.9 • Responde Rápido</span>
-        
-        <h4 class="font-bold text-base text-gray-900">Pizzaria Bella Blumenau</h4>
-        <p class="text-xs text-gray-500 mb-2">Alimentação • Bairro Velha</p>
+<div class="max-w-4xl mx-auto text-center">
 
-        <div class="bg-orange-50 border border-orange-200 text-orange-800 text-xs p-2 rounded-lg mb-3">
-          🎁 <strong>Exclusivo Acha:</strong> Ganhe 1 Guaraná 2L no combo família!
-        </div>
+<div class="inline-flex items-center gap-2 bg-blue-800/40 px-3 py-1 rounded-full text-xs font-semibold mb-2 backdrop-blur-sm border border-blue-400/30">
 
-        <a href="https://wa.me/5547999999999?text=Olá!%20Vi%20no%20Acha%20Blumenau%20e%20quero%20o%20combo%20com%20Guaraná%20grátis" target="_blank" class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-sm hover:bg-green-600 transition">
-          Fazer Pedido no WhatsApp
-        </a>
-      </div>
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
 
-      <!-- CARD 2 (SERVIÇO) -->
-      <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 relative">
-        <span class="absolute top-3 right-3 bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Atendimento 24h</span>
-        
-        <h4 class="font-bold text-base text-gray-900">Chaveiro e Borracharia Schnell</h4>
-        <p class="text-xs text-gray-500 mb-2">Serviços • Bairro Garcia</p>
+Diretório Local de Blumenau - SC
 
-        <div class="bg-gray-50 text-gray-600 text-xs p-2 rounded-lg mb-3">
-          ⚡ Socorro rápido para carros, motos e aberturas residenciais.
-        </div>
+</div>
 
-        <a href="https://wa.me/5547999999999?text=Olá!%20Vi%20no%20Acha%20Blumenau%20e%20preciso%20de%20um%20atendimento" target="_blank" class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-sm hover:bg-green-600 transition">
-          Chamar no WhatsApp
-        </a>
-      </div>
 
-    </div>
-  </main>
+<!-- Logo em Texto -->
 
-  <!-- RODAPÉ LIMPO E TERMOS DE USO -->
-  <footer class="mt-8 text-center text-xs text-gray-400 space-y-2">
-    <p>© 2026 Acha Blumenau — Todos os direitos reservados.</p>
-    <p>
-      <a href="#" class="underline hover:text-gray-600">Termos de Uso</a> • 
-      <a href="#" class="underline hover:text-gray-600">Política de Privacidade</a>
-    </p>
-  </footer>
+<h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+
+<i class="fa-solid font-bold fa-location-dot text-emerald-400 mr-1.5"></i>
+
+<span class="text-white">Acha</span><span class="text-emerald-400">Blumenau</span>
+
+</h1>
+
+<p class="text-blue-100 text-sm md:text-base mt-1 font-medium max-w-md mx-auto">
+
+Os melhores profissionais da cidade a um clique do seu WhatsApp.
+
+</p>
+
+</div>
+
+
+
+<!-- Botão para Cadastrar Profissional (Redireciona para o Google Forms) -->
+
+<div class="mt-4 text-center">
+
+<a href="https://forms.gle/xdrfLpEP6DYpBVzq5" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium px-3 py-1.5 rounded-lg transition-all">
+
+<i class="fa-solid fa-plus text-emerald-400"></i>
+
+Anunciar meu negócio
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- CONTEÚDO PRINCIPAL (BUSCA + FILTROS + LISTA) -->
+
+<main class="max-w-4xl mx-auto w-full px-4 -mt-4 mb-12 flex-grow">
+
+
+
+<!-- CAIXA DE BUSCA -->
+
+<div class="bg-white rounded-2xl shadow-lg p-3 md:p-4 mb-5 border border-slate-100">
+
+<div class="relative flex items-center">
+
+<i class="fa-solid fa-magnifying-glass absolute left-4 text-slate-400 text-lg"></i>
+
+<input
+
+type="text"
+
+id="search-input"
+
+oninput="filtrarProfissionais()"
+
+placeholder="Busque por serviço, nome ou bairro (ex: Velha, Eletricista...)"
+
+class="w-full pl-11 pr-10 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm md:text-base text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all"
+
+>
+
+<button id="clear-search" onclick="limparBusca()" class="hidden absolute right-3 text-slate-400 hover:text-slate-600 p-1">
+
+<i class="fa-solid fa-xmark text-lg"></i>
+
+</button>
+
+</div>
+
+
+
+<!-- FILTRO DE STATUS (24h / Aberto) -->
+
+<div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600">
+
+<span class="font-medium">Filtro rápido:</span>
+
+<div class="flex items-center gap-2">
+
+<button
+
+id="btn-filter-24h"
+
+onclick="toggleFiltro24h()"
+
+class="px-2.5 py-1 rounded-full border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 transition-all font-medium flex items-center gap-1"
+
+>
+
+<i class="fa-solid fa-clock text-amber-500"></i> 24 Horas / Emergência
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- CARROSSEL DE CATEGORIAS -->
+
+<div class="mb-6 overflow-x-auto no-scrollbar flex gap-2 pb-1">
+
+<button onclick="filtrarCategoria('todas')" class="cat-btn active flex-shrink-0 bg-blue-600 text-white font-medium px-4 py-2 rounded-xl text-xs md:text-sm shadow-sm transition-all">
+
+Todas
+
+</button>
+
+<button onclick="filtrarCategoria('Mecânicos')" class="cat-btn flex-shrink-0 bg-white hover:bg-slate-100 text-slate-700 font-medium px-4 py-2 rounded-xl text-xs md:text-sm border border-slate-200 shadow-sm transition-all flex items-center gap-1.5">
+
+<i class="fa-solid fa-wrench text-blue-600"></i> Mecânicos
+
+</button>
+
+<button onclick="filtrarCategoria('Eletricistas')" class="cat-btn flex-shrink-0 bg-white hover:bg-slate-100 text-slate-700 font-medium px-4 py-2 rounded-xl text-xs md:text-sm border border-slate-200 shadow-sm transition-all flex items-center gap-1.5">
+
+<i class="fa-solid fa-bolt text-amber-500"></i> Eletricistas
+
+</button>
+
+<button onclick="filtrarCategoria('Encanadores')" class="cat-btn flex-shrink-0 bg-white hover:bg-slate-100 text-slate-700 font-medium px-4 py-2 rounded-xl text-xs md:text-sm border border-slate-200 shadow-sm transition-all flex items-center gap-1.5">
+
+<i class="fa-solid fa-faucet text-cyan-500"></i> Encanadores
+
+</button>
+
+<button onclick="filtrarCategoria('Chaveiros')" class="cat-btn flex-shrink-0 bg-white hover:bg-slate-100 text-slate-700 font-medium px-4 py-2 rounded-xl text-xs md:text-sm border border-slate-200 shadow-sm transition-all flex items-center gap-1.5">
+
+<i class="fa-solid fa-key text-yellow-600"></i> Chaveiros
+
+</button>
+
+<button onclick="filtrarCategoria('Ar-Condicionado')" class="cat-btn flex-shrink-0 bg-white hover:bg-slate-100 text-slate-700 font-medium px-4 py-2 rounded-xl text-xs md:text-sm border border-slate-200 shadow-sm transition-all flex items-center gap-1.5">
+
+<i class="fa-solid fa-snowflake text-sky-500"></i> Ar-Condicionado
+
+</button>
+
+<button onclick="filtrarCategoria('Guinchos')" class="cat-btn flex-shrink-0 bg-white hover:bg-slate-100 text-slate-700 font-medium px-4 py-2 rounded-xl text-xs md:text-sm border border-slate-200 shadow-sm transition-all flex items-center gap-1.5">
+
+<i class="fa-solid fa-truck-monster text-rose-500"></i> Guinchos
+
+</button>
+
+</div>
+
+
+
+<!-- CONTADOR E RESULTADOS -->
+
+<div class="flex items-center justify-between mb-3 px-1">
+
+<h2 class="text-xs uppercase tracking-wider font-bold text-slate-400" id="resultados-count">Profissionais Encontrados</h2>
+
+<span class="text-xs text-slate-500">Blumenau - SC</span>
+
+</div>
+
+
+
+<!-- LISTA DE CARDS -->
+
+<div id="lista-profissionais" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+<!-- Cards serão injetados via JS -->
+
+</div>
+
+
+
+<!-- MENSAGEM DE NENHUM RESULTADO -->
+
+<div id="no-results" class="hidden text-center py-12 bg-white rounded-2xl border border-slate-200 p-6 mt-4">
+
+<div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-3 text-slate-400">
+
+<i class="fa-solid fa-magnifying-glass text-xl"></i>
+
+</div>
+
+<h3 class="font-bold text-slate-700 text-base">Nenhum profissional encontrado</h3>
+
+<p class="text-xs text-slate-500 mt-1 max-w-xs mx-auto">Tente buscar por termos mais genéricos ou limpe os filtros selecionados.</p>
+
+<button onclick="limparTudo()" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-xl text-xs font-semibold hover:bg-blue-700 transition-all">
+
+Ver todos os profissionais
+
+</button>
+
+</div>
+
+
+
+</main>
+
+
+
+<!-- BANNER DE CHAMADA PARA O PROFISSIONAL -->
+
+<section class="bg-blue-900 text-white py-8 px-4 border-t border-blue-800">
+
+<div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+
+<div>
+
+<h3 class="text-lg font-bold">Você é prestador de serviço em Blumenau?</h3>
+
+<p class="text-blue-200 text-xs md:text-sm mt-0.5">Cadastre seu negócio e comece a receber contatos direto no seu WhatsApp.</p>
+
+</div>
+
+<a href="https://forms.gle/xdrfLpEP6DYpBVzq5" target="_blank" rel="noopener noreferrer" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-all shadow-md flex items-center gap-2 flex-shrink-0">
+
+<i class="fa-solid fa-rocket"></i>
+
+Quero me cadastrar
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- RODAPÉ -->
+
+<footer class="bg-slate-900 text-slate-400 py-6 px-4 text-center text-xs">
+
+<div class="max-w-4xl mx-auto space-y-2">
+
+<p><strong>Acha Blumenau</strong> © 2026 - O guia definitivo de serviços da cidade.</p>
+
+<p class="text-slate-500">Desenvolvido de forma independente para conectar clientes e trabalhadores locais.</p>
+
+</div>
+
+</footer>
+
+
+
+<!-- MODAL DE DETALHES DO PROFISSIONAL (EXPANDIDO) -->
+
+<div id="modal-detalhes" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+
+<div class="bg-white rounded-2xl max-w-lg w-full shadow-2xl relative border border-slate-100 max-h-[90vh] overflow-y-auto">
+
+
+<!-- Botão Fechar -->
+
+<button onclick="toggleModal('modal-detalhes')" class="absolute top-3 right-3 text-slate-500 hover:text-slate-800 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100/80 backdrop-blur-sm z-10 transition-all">
+
+<i class="fa-solid fa-xmark text-lg"></i>
+
+</button>
+
+
+
+<!-- Banner do Modal -->
+
+<div id="detalhe-banner" class="h-32 bg-gradient-to-r from-blue-600 to-indigo-700 relative flex items-end p-4">
+
+<span id="detalhe-badge-destaque" class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider flex items-center gap-1 shadow-md">
+
+<i class="fa-solid fa-certificate"></i> Profissional Em Destaque
+
+</span>
+
+</div>
+
+
+
+<div class="p-5">
+
+<!-- Cabeçalho do Perfil -->
+
+<div class="flex items-start justify-between gap-2">
+
+<div>
+
+<span id="detalhe-categoria" class="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded-md inline-block mb-1">Mecânica</span>
+
+<h3 id="detalhe-nome" class="text-xl font-bold text-slate-800 leading-tight">Nome do Profissional</h3>
+
+<p id="detalhe-bairro" class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+
+<i class="fa-solid fa-location-dot text-slate-400"></i> Bairro: Badenfurt, Blumenau - SC
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- Avaliação e Horário -->
+
+<div class="flex items-center gap-4 py-3 my-3 border-y border-slate-100 text-xs">
+
+<div class="flex items-center gap-1.5">
+
+<div id="detalhe-estrelas" class="flex text-amber-400"></div>
+
+<span id="detalhe-nota" class="font-bold text-slate-800">4.9</span>
+
+<span id="detalhe-count-avaliacoes" class="text-slate-400">(42)</span>
+
+</div>
+
+<div class="h-3 w-px bg-slate-200"></div>
+
+<div id="detalhe-horario" class="text-slate-600 font-medium flex items-center gap-1">
+
+<i class="fa-regular fa-clock text-slate-400"></i> Seg a Sáb: 07:30 - 18:30
+
+</div>
+
+</div>
+
+
+
+<!-- ENDEREÇO COM MAPA -->
+
+<div class="mb-4 bg-slate-50 p-3 rounded-xl border border-slate-200">
+
+<div class="flex items-start justify-between gap-2 mb-2">
+
+<div>
+
+<h4 class="text-xs uppercase font-bold text-slate-500 tracking-wider">Endereço de Atendimento</h4>
+
+<p id="detalhe-endereco-completo" class="text-xs text-slate-700 font-medium mt-0.5">Rua Exemplo, 123 - Badenfurt, Blumenau - SC</p>
+
+</div>
+
+<a
+
+id="detalhe-btn-mapa"
+
+href="#"
+
+target="_blank"
+
+class="bg-blue-600 hover:bg-blue-700 text-white text-[11px] font-semibold px-2.5 py-1.5 rounded-lg flex items-center gap-1 flex-shrink-0 transition-all shadow-sm"
+
+>
+
+<i class="fa-solid fa-map-location-dot"></i>
+
+Abrir Mapa
+
+</a>
+
+</div>
+
+<!-- Preview do Mapa Integrado -->
+
+<div class="w-full h-32 rounded-lg overflow-hidden border border-slate-200 bg-slate-200 relative">
+
+<iframe
+
+id="detalhe-mapa-iframe"
+
+class="w-full h-full border-0"
+
+loading="lazy"
+
+allowfullscreen
+
+src="https://maps.google.com/maps?q=Blumenau&t=&z=13&ie=UTF8&iwloc=&output=embed"
+
+></iframe>
+
+</div>
+
+</div>
+
+
+
+<!-- Descrição / Serviços Prestados -->
+
+<div class="mb-4">
+
+<h4 class="text-xs uppercase font-bold text-slate-400 tracking-wider mb-2">Serviços Realizados</h4>
+
+<ul id="detalhe-servicos-lista" class="grid grid-cols-2 gap-1.5 text-xs text-slate-700">
+
+<!-- Injetado dinamicamente -->
+
+</ul>
+
+</div>
+
+
+
+<!-- Ações de Contato -->
+
+<div class="space-y-2 pt-2 border-t border-slate-100">
+
+<a
+
+id="detalhe-btn-whatsapp"
+
+href="#"
+
+target="_blank"
+
+class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition-all shadow-md"
+
+>
+
+<i class="fa-brands fa-whatsapp text-xl"></i>
+
+Conversar no WhatsApp Agora
+
+</a>
+
+
+
+<button
+
+onclick="copiarLinkPerfil()"
+
+class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-2 px-4 rounded-xl text-xs flex items-center justify-center gap-1.5 transition-all"
+
+>
+
+<i class="fa-regular fa-copy"></i>
+
+<span id="btn-copiar-texto">Copiar Link do Perfil</span>
+
+</button>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- SCRIPT DA APLICAÇÃO -->
+
+<script>
+
+const profissionaisData = [
+
+{
+
+id: 1,
+
+destaque: true,
+
+nome: "Auto Mecânica do Beto",
+
+categoria: "Mecânicos",
+
+bairro: "Badenfurt",
+
+endereco: "Rua Heinrich Hemmer, 450 - Badenfurt, Blumenau - SC",
+
+mapaQuery: "Rua Heinrich Hemmer, 450 Badenfurt Blumenau",
+
+avaliacao: 4.9,
+
+avaliacoesCount: 42,
+
+horario: "Seg a Sáb: 07:30 - 18:30",
+
+is24h: false,
+
+whatsapp: "5547999990001",
+
+mensagemWhats: "Olá Beto! Vi seu perfil no Acha Blumenau e gostaria de um orçamento.",
+
+servicos: ["Mecânica Geral", "Troca de Óleo", "Freios e Suspensão", "Diagnóstico por Injeção"]
+
+},
+
+{
+
+id: 2,
+
+destaque: true,
+
+nome: "Eletricista Voltz 24h",
+
+categoria: "Eletricistas",
+
+bairro: "Velha",
+
+endereco: "Atendimento a Domicílio na Região da Velha, Blumenau - SC",
+
+mapaQuery: "Bairro Velha Blumenau SC",
+
+avaliacao: 5.0,
+
+avaliacoesCount: 38,
+
+horario: "Atendimento 24h",
+
+is24h: true,
+
+whatsapp: "5547999990002",
+
+mensagemWhats: "Olá! Preciso de um eletricista urgente (Acha Blumenau).",
+
+servicos: ["Urgências Elétricas", "Troca de Disjuntores", "Instalação de Chuveiros", "Projetos Residenciais"]
+
+},
+
+{
+
+id: 3,
+
+destaque: false,
+
+nome: "SOS Guinchos Blumenau",
+
+categoria: "Guinchos",
+
+bairro: "Itoupava Central",
+
+endereco: "Rua Dr. Pedro Zimmermann, 2100 - Itoupava Central, Blumenau - SC",
+
+mapaQuery: "Rua Dr Pedro Zimmermann Itoupava Central Blumenau",
+
+avaliacao: 4.8,
+
+avaliacoesCount: 29,
+
+horario: "Atendimento 24h",
+
+is24h: true,
+
+whatsapp: "5547999990003",
+
+mensagemWhats: "Olá! Preciso de um guincho urgente.",
+
+servicos: ["Socorro 24 Horas", "Remoção de Veículos", "Carga de Bateria", "Viagens Intermunicipais"]
+
+},
+
+{
+
+id: 4,
+
+destaque: true,
+
+nome: "Chaveiro Rapidez BNU",
+
+categoria: "Chaveiros",
+
+bairro: "Garcia",
+
+endereco: "Rua Amazonas, 1200 - Garcia, Blumenau - SC",
+
+mapaQuery: "Rua Amazonas Garcia Blumenau",
+
+avaliacao: 4.9,
+
+avaliacoesCount: 56,
+
+horario: "Atendimento 24h",
+
+is24h: true,
+
+whatsapp: "5547999990004",
+
+mensagemWhats: "Olá! Preciso de serviço de chaveiro urgente.",
+
+servicos: ["Abertura Residencial", "Chaves Automotivas", "Cópia de Chaves", "Troca de Segredos"]
+
+},
+
+{
+
+id: 5,
+
+destaque: false,
+
+nome: "Dr. Ar-Condicionado",
+
+categoria: "Ar-Condicionado",
+
+bairro: "Salto Norte",
+
+endereco: "Rua Engenheiro Uedo Deeke, 890 - Salto Norte, Blumenau - SC",
+
+mapaQuery: "Rua Engenheiro Uedo Deeke Salto Norte Blumenau",
+
+avaliacao: 4.7,
+
+avaliacoesCount: 19,
+
+horario: "Seg a Sex: 08:00 - 18:00",
+
+is24h: false,
+
+whatsapp: "5547999990005",
+
+mensagemWhats: "Olá! Gostaria de um orçamento para instalação/limpeza de ar-condicionado.",
+
+servicos: ["Higienização Completa", "Instalação Split", "Carga de Gás", "Manutenção Preventiva"]
+
+},
+
+{
+
+id: 6,
+
+destaque: false,
+
+nome: "HidroServ Encanadores",
+
+categoria: "Encanadores",
+
+bairro: "Fortaleza",
+
+endereco: "Atendimento a Domicílio - Fortaleza e Região, Blumenau - SC",
+
+mapaQuery: "Bairro Fortaleza Blumenau SC",
+
+avaliacao: 4.8,
+
+avaliacoesCount: 31,
+
+horario: "Seg a Sáb: 08:00 - 19:00",
+
+is24h: false,
+
+whatsapp: "5547999990006",
+
+mensagemWhats: "Olá! Preciso de um encanador para um reparo residencial.",
+
+servicos: ["Caça Vazamentos", "Desentupimento", "Instalação de Torneiras", "Limpeza de Caixa d'Água"]
+
+}
+
+];
+
+
+
+let categoriaAtiva = 'todas';
+
+let apenas24h = false;
+
+
+
+window.onload = function() {
+
+renderizarProfissionais(profissionaisData);
+
+};
+
+
+
+function renderizarProfissionais(lista) {
+
+const container = document.getElementById('lista-profissionais');
+
+const noResults = document.getElementById('no-results');
+
+const countLabel = document.getElementById('resultados-count');
+
+
+container.innerHTML = '';
+
+const listaOrdenada = [...lista].sort((a, b) => b.destaque - a.destaque);
+
+
+
+if (listaOrdenada.length === 0) {
+
+noResults.classList.remove('hidden');
+
+countLabel.innerText = "Nenhum resultado";
+
+return;
+
+} else {
+
+noResults.classList.add('hidden');
+
+countLabel.innerText = `${listaOrdenada.length} Profissiona${listaOrdenada.length > 1 ? 'is' : 'l'} Encontrado${listaOrdenada.length > 1 ? 's' : ''}`;
+
+}
+
+
+
+listaOrdenada.forEach(p => {
+
+const estrelasHTML = Array(5).fill(0).map((_, i) => {
+
+return `<i class="fa-solid fa-star ${i < Math.floor(p.avaliacao) ? 'text-amber-400' : 'text-slate-200'}"></i>`;
+
+}).join('');
+
+
+
+const card = document.createElement('div');
+
+card.className = `card-transition cursor-pointer bg-white rounded-2xl p-4 shadow-sm hover:shadow-md border relative flex flex-col justify-between ${
+
+p.destaque
+
+? 'border-emerald-500/50 ring-2 ring-emerald-500/20 bg-gradient-to-b from-emerald-50/20 via-white to-white'
+
+: 'border-slate-200'
+
+}`;
+
+
+
+card.onclick = (e) => {
+
+if (e.target.closest('a')) return;
+
+abrirDetalhesProfissional(p.id);
+
+};
+
+
+
+card.innerHTML = `
+
+<div>
+
+<div class="flex items-center justify-between gap-2 mb-2">
+
+${p.destaque
+
+? `<span class="bg-emerald-500 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase tracking-wider flex items-center gap-1 shadow-sm">
+
+<i class="fa-solid fa-certificate"></i> Destaque
+
+</span>`
+
+: `<span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">${p.categoria}</span>`
+
+}
+
+
+
+${p.is24h
+
+? `<span class="bg-rose-100 text-rose-700 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-rose-200">
+
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-ping"></span> 24 Horas
+
+</span>`
+
+: `<span class="text-[10px] font-medium text-slate-500 flex items-center gap-1">
+
+<i class="fa-regular fa-clock"></i> ${p.horario}
+
+</span>`
+
+}
+
+</div>
+
+
+
+<h3 class="font-bold text-slate-800 text-base md:text-lg leading-snug flex items-center gap-1.5">
+
+${p.nome}
+
+</h3>
+
+
+
+<div class="flex items-center gap-1 text-slate-500 text-xs mt-1">
+
+<i class="fa-solid fa-location-dot text-slate-400"></i>
+
+<span>Bairro: <strong>${p.bairro}</strong> (Blumenau)</span>
+
+</div>
+
+
+
+<div class="flex items-center gap-1.5 mt-2.5">
+
+<div class="text-xs flex">
+
+${estrelasHTML}
+
+</div>
+
+<span class="text-xs font-bold text-slate-700">${p.avaliacao}</span>
+
+<span class="text-[11px] text-slate-400">(${p.avaliacoesCount} avaliações)</span>
+
+</div>
+
+</div>
+
+
+
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+
+<span class="text-[11px] font-semibold text-slate-400 group-hover:text-blue-600 transition-colors flex items-center gap-1">
+
+Ver detalhes <i class="fa-solid fa-chevron-right text-[9px]"></i>
+
+</span>
+
+<a
+
+href="https://wa.me/${p.whatsapp}?text=${encodeURIComponent(p.mensagemWhats)}"
+
+target="_blank"
+
+rel="noopener noreferrer"
+
+onclick="event.stopPropagation()"
+
+class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-95"
+
+>
+
+<i class="fa-brands fa-whatsapp text-base"></i>
+
+WhatsApp
+
+</a>
+
+</div>
+
+`;
+
+
+
+container.appendChild(card);
+
+});
+
+}
+
+
+
+function abrirDetalhesProfissional(id) {
+
+const p = profissionaisData.find(item => item.id === id);
+
+if (!p) return;
+
+
+
+document.getElementById('detalhe-nome').innerText = p.nome;
+
+document.getElementById('detalhe-categoria').innerText = p.categoria;
+
+document.getElementById('detalhe-bairro').innerHTML = `<i class="fa-solid fa-location-dot text-slate-400"></i> Bairro: <strong>${p.bairro}</strong> (Blumenau - SC)`;
+
+document.getElementById('detalhe-nota').innerText = p.avaliacao;
+
+document.getElementById('detalhe-count-avaliacoes').innerText = `(${p.avaliacoesCount} avaliações virtuais)`;
+
+
+
+document.getElementById('detalhe-endereco-completo').innerText = p.endereco || `Rua do Bairro ${p.bairro}, Blumenau - SC`;
+
+
+const queryMapa = encodeURIComponent(p.mapaQuery || `${p.bairro} Blumenau SC`);
+
+document.getElementById('detalhe-mapa-iframe').src = `https://maps.google.com/maps?q=${queryMapa}&t=&z=14&ie=UTF8&iwloc=&output=embed`;
+
+document.getElementById('detalhe-btn-mapa').href = `https://www.google.com/maps/search/?api=1&query=${queryMapa}`;
+
+
+
+const badge = document.getElementById('detalhe-badge-destaque');
+
+if (p.destaque) {
+
+badge.classList.remove('hidden');
+
+} else {
+
+badge.classList.add('hidden');
+
+}
+
+
+
+document.getElementById('detalhe-horario').innerHTML = p.is24h
+
+? `<span class="text-rose-600 font-bold flex items-center gap-1"><i class="fa-solid fa-clock"></i> Atendimento 24 Horas</span>`
+
+: `<i class="fa-regular fa-clock text-slate-400"></i> ${p.horario}`;
+
+
+
+const estrelasContainer = document.getElementById('detalhe-estrelas');
+
+estrelasContainer.innerHTML = Array(5).fill(0).map((_, i) => {
+
+return `<i class="fa-solid fa-star ${i < Math.floor(p.avaliacao) ? 'text-amber-400' : 'text-slate-200'}"></i>`;
+
+}).join('');
+
+
+
+const servicosLista = document.getElementById('detalhe-servicos-lista');
+
+servicosLista.innerHTML = (p.servicos || ['Atendimento Geral', 'Orçamento Sem Compromisso']).map(s => {
+
+return `<li class="flex items-center gap-1.5 bg-slate-50 p-2 rounded-lg border border-slate-100"><i class="fa-solid fa-check text-emerald-500"></i> ${s}</li>`;
+
+}).join('');
+
+
+
+const btnWhats = document.getElementById('detalhe-btn-whatsapp');
+
+btnWhats.href = `https://wa.me/${p.whatsapp}?text=${encodeURIComponent(p.mensagemWhats)}`;
+
+
+
+toggleModal('modal-detalhes');
+
+}
+
+
+
+function copiarLinkPerfil() {
+
+if (navigator.clipboard && navigator.clipboard.writeText) {
+
+navigator.clipboard.writeText(window.location.href);
+
+} else {
+
+const tempInput = document.createElement('input');
+
+tempInput.value = window.location.href;
+
+document.body.appendChild(tempInput);
+
+tempInput.select();
+
+document.execCommand('copy');
+
+document.body.removeChild(tempInput);
+
+}
+
+
+
+const btnText = document.getElementById('btn-copiar-texto');
+
+btnText.innerText = "Link Copiado!";
+
+setTimeout(() => {
+
+btnText.innerText = "Copiar Link do Perfil";
+
+}, 2000);
+
+}
+
+
+
+function filtrarProfissionais() {
+
+const termo = document.getElementById('search-input').value.toLowerCase().trim();
+
+const clearBtn = document.getElementById('clear-search');
+
+
+
+if (termo.length > 0) {
+
+clearBtn.classList.remove('hidden');
+
+} else {
+
+clearBtn.classList.add('hidden');
+
+}
+
+
+
+const resultado = profissionaisData.filter(p => {
+
+const atendeCategoria = (categoriaAtiva === 'todas') || (p.categoria === categoriaAtiva);
+
+const atende24h = (!apenas24h) || (p.is24h === true);
+
+
+
+const buscaTexto = p.nome.toLowerCase().includes(termo) ||
+
+p.categoria.toLowerCase().includes(termo) ||
+
+p.bairro.toLowerCase().includes(termo);
+
+
+
+return atendeCategoria && atende24h && buscaTexto;
+
+});
+
+
+
+renderizarProfissionais(resultado);
+
+}
+
+
+
+function filtrarCategoria(cat) {
+
+categoriaAtiva = cat;
+
+
+
+document.querySelectorAll('.cat-btn').forEach(btn => {
+
+btn.classList.remove('bg-blue-600', 'text-white');
+
+btn.classList.add('bg-white', 'text-slate-700');
+
+});
+
+
+
+event.currentTarget.classList.remove('bg-white', 'text-slate-700');
+
+event.currentTarget.classList.add('bg-blue-600', 'text-white');
+
+
+
+filtrarProfissionais();
+
+}
+
+
+
+function toggleFiltro24h() {
+
+apenas24h = !apenas24h;
+
+const btn = document.getElementById('btn-filter-24h');
+
+
+
+if (apenas24h) {
+
+btn.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200');
+
+btn.classList.add('bg-amber-500', 'text-white', 'border-amber-500');
+
+} else {
+
+btn.classList.remove('bg-amber-500', 'text-white', 'border-amber-500');
+
+btn.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200');
+
+}
+
+
+
+filtrarProfissionais();
+
+}
+
+
+
+function limparBusca() {
+
+document.getElementById('search-input').value = '';
+
+document.getElementById('clear-search').classList.add('hidden');
+
+filtrarProfissionais();
+
+}
+
+
+
+function limparTudo() {
+
+categoriaAtiva = 'todas';
+
+apenas24h = false;
+
+document.getElementById('search-input').value = '';
+
+document.getElementById('clear-search').classList.add('hidden');
+
+
+
+const btn24h = document.getElementById('btn-filter-24h');
+
+btn24h.classList.remove('bg-amber-500', 'text-white', 'border-amber-500');
+
+btn24h.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200');
+
+
+
+document.querySelectorAll('.cat-btn').forEach((btn, idx) => {
+
+if (idx === 0) {
+
+btn.classList.add('bg-blue-600', 'text-white');
+
+btn.classList.remove('bg-white', 'text-slate-700');
+
+} else {
+
+btn.classList.remove('bg-blue-600', 'text-white');
+
+btn.classList.add('bg-white', 'text-slate-700');
+
+}
+
+});
+
+
+
+renderizarProfissionais(profissionaisData);
+
+}
+
+
+
+function toggleModal(modalId) {
+
+const modal = document.getElementById(modalId);
+
+modal.classList.toggle('hidden');
+
+}
+
+</script>
 
 </body>
-</html>
+
+</html> 
