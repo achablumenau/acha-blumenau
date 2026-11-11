@@ -7,6 +7,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- COLE O SEU CÓDIGO DO FIREBASE AQUI -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAqOKxmVI4t9BQJbiL3e1uPWaH-Dp4p3BE",
+        authDomain: "acha-blumenau.firebaseapp.com",
+        projectId: "acha-blumenau",
+        storageBucket: "acha-blumenau.firebasestorage.app",
+        messagingSenderId: "189430633480",
+        appId: "1:189430633480:web:d8f520bbd21cd6a59cadbd",
+        measurementId: "G-BGW9S9RWSD"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+    <!-- FIM DO CÓDIGO DO FIREBASE -->
     
     <style>
     body {
